@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x2d699cfaab2ab22bae2cbc8e38fa631a1497acf50e1f2ec25ff639165d8a710d",
+  "id": "0xab1608aebdb2704b491fa3558800e2e00e994708174a2f03e5b0cf0eea2b1c3b",
   "contract_name": "ERC1967Proxy",
   "address": "0xa06b10db9f390990364a3984c04fadf1c13691b5",
   "chain_id": 130,
@@ -160,15 +160,14 @@
     }
   ],
   "unvalidated_metadata": {
-    "author_name": "Author",
-    "description": "System Description",
+    "author_name": "Cantina",
+    "description": "Sky Unichain sUSDS",
     "hardfork": [
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://example.org/report.pdf",
-    "source_url": "https://github.com/source/code",
-    "security_contact": "security@example.org",
-    "implementation_name": "SUsds"
+    "audit_report": "https://github.com/makerdao/sdai/blob/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/audit/20240926-cantina-report-maker-susds.pdf",
+    "source_url": "https://github.com/makerdao/sdai/tree/susds",
+    "security_contact": "security@cantina.xyz"
   }
 }

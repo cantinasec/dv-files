@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x955a6e6138cfb1cac63e17e230be208b7dd925eb92793206c50246951c23e52e",
+  "id": "0x92a8abe2bf002b90bf5ceb2fc0244f8e4398c85bbf1c4c39b6a76d447ae9155d",
   "contract_name": "ERC1967Proxy",
   "address": "0xb5b2dc7fd34c249f4be7fb1fcea07950784229e0",
   "chain_id": 10,
@@ -151,15 +151,14 @@
     }
   ],
   "unvalidated_metadata": {
-    "author_name": "Author",
-    "description": "System Description",
+    "author_name": "Cantina",
+    "description": "Sky Optimism sUSDS",
     "hardfork": [
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://example.org/report.pdf",
-    "source_url": "https://github.com/source/code",
-    "security_contact": "security@example.org",
-    "implementation_name": "SUsds"
+    "audit_report": "https://github.com/makerdao/sdai/blob/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/audit/20240926-cantina-report-maker-susds.pdf",
+    "source_url": "https://github.com/makerdao/sdai/tree/susds",
+    "security_contact": "security@cantina.xyz"
   }
 }

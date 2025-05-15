@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x7dd8e420e8922d0953bd0d20255631a0118bbbac33021cef056d34382be39e44",
+  "id": "0x7ea438c27e7a01cb03283d575a6521ef4abb25972cdc153334bb7ffa409e7594",
   "contract_name": "ERC1967Proxy",
   "address": "0xdf0535a4c96c9cd8921d8fec92a7680b281681d2",
   "chain_id": 1,
@@ -175,15 +175,14 @@
     }
   ],
   "unvalidated_metadata": {
-    "author_name": "Author",
-    "description": "System Description",
+    "author_name": "Cantina",
+    "description": "Sky UniChain Bridge",
     "hardfork": [
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://example.org/report.pdf",
-    "source_url": "https://github.com/source/code",
-    "security_contact": "security@example.org",
-    "implementation_name": "L1TokenBridge"
+    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20240909-cantina-report-review-makerdao-op-token-bridge.pdf",
+    "source_url": "http://github.com/makerdao/op-token-bridge/",
+    "security_contact": "security@cantina.xyz"
   }
 }
