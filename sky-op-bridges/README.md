@@ -21,7 +21,7 @@ git submodule status
 
 ## Install Deployment Verification Tool
 
-Pull the [Deployment Verification tool](https://github.com/mario-eth/deployment_validation) and install it via docker or from sources, more information [here](https://github.com/mario-eth/deployment_validation?tab=readme-ov-file#installation)
+Go to the [Deployment Verification tool](../dv) and install it via docker or from sources, more information [here](../dv/README.md)
 
 ## Create Validation File
 
