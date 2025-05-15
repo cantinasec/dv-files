@@ -1,0 +1,37 @@
+{
+  "version": "0.9.1",
+  "id": "0xbde28ae872d3cb60a424143738f1dfe80bb3808ba6ff55c0f42c418cdf6c5596",
+  "contract_name": "L2TokenBridgeSpell",
+  "address": "0x32760698c87834c02ed9aff2d4fc3e16c029b936",
+  "chain_id": 130,
+  "deployment_block_num": 15192412,
+  "init_block_num": 16567310,
+  "deployment_tx": "0x602d4514865089d082e0bcd43b1b2b372e46bc4db212c66462de5b6c3d40326f",
+  "codehash": "0x27eb743ce2f669c2a6ce9a9f55561347c40873e9afbde9ff6063aeb6e1bb5279",
+  "insecure": false,
+  "immutables": [
+    {
+      "var_name": "l2Bridge",
+      "value": "0x000000000000000000000000a13152006d0216fe4627a0d3b006087a6a55d752"
+    }
+  ],
+  "constructor_args": [
+    {
+      "var_name": "l2Bridge_",
+      "value": "0xa13152006d0216fe4627a0d3b006087a6a55d752"
+    }
+  ],
+  "critical_storage_variables": [],
+  "critical_events": [],
+  "unvalidated_metadata": {
+    "author_name": "Author",
+    "description": "System Description",
+    "hardfork": [
+      "paris",
+      "shanghai"
+    ],
+    "audit_report": "https://example.org/report.pdf",
+    "source_url": "https://github.com/source/code",
+    "security_contact": "security@example.org"
+  }
+}
