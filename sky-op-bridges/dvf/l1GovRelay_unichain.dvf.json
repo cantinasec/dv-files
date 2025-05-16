@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0xc7a5a1a394fd19341148724b073b81e0befbcd09458cb2676c0731f725b23418",
+  "id": "0x9f75785683d2150e5f900d3172fc539c01b57feef5904f9d186eaaba1fc05238",
   "contract_name": "L1GovernanceRelay",
   "address": "0xb383070cf9f4f01c3a2cfd0ef6da4bc057b429b7",
   "chain_id": 1,
@@ -85,7 +85,7 @@
   ],
   "unvalidated_metadata": {
     "author_name": "Cantina",
-    "description": "Sky UniChain Bridge",
+    "description": "Sky Unichain Token Bridge",
     "hardfork": [
       "paris",
       "shanghai"

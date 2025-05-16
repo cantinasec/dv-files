@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x683a1070de9494bd669228507c47aca4096b145a9fd09a0c348283ace7db333f",
+  "id": "0x46331f183dc5efb9b6ebd3ea33809ee8912e9235dc7590117b26acf6fde99dfe",
   "contract_name": "SUsds",
   "address": "0x6f0888dda6a5e35451d5be0fabb20171715788b3",
   "chain_id": 10,
@@ -83,14 +83,14 @@
     }
   ],
   "unvalidated_metadata": {
-    "author_name": "Author",
-    "description": "System Description",
+    "author_name": "Cantina",
+    "description": "Sky sUSDS Token on Optimism",
     "hardfork": [
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://example.org/report.pdf",
-    "source_url": "https://github.com/source/code",
-    "security_contact": "security@example.org"
+    "audit_report": "https://github.com/makerdao/sdai/blob/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/audit/20240926-cantina-report-maker-susds.pdf",
+    "source_url": "https://github.com/makerdao/sdai/tree/susds",
+    "security_contact": "security@cantina.xyz"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x611152dcae7063f80f575d88bb455a06942fd97c430af0b584d46760bae39034",
+  "id": "0x36cccd99e3722a24b008983e33869b609fa0f986971a77a8416067468d410b9a",
   "contract_name": "L2TokenBridge",
   "address": "0xc2702c859016db756149716cc4d2b7d7a436cf04",
   "chain_id": 10,
@@ -115,14 +115,14 @@
     }
   ],
   "unvalidated_metadata": {
-    "author_name": "Author",
-    "description": "System Description",
+    "author_name": "Cantina",
+    "description": "Sky Optimism Token Bridge",
     "hardfork": [
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://example.org/report.pdf",
-    "source_url": "https://github.com/source/code",
-    "security_contact": "security@example.org"
+    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20240909-cantina-report-review-makerdao-op-token-bridge.pdf",
+    "source_url": "http://github.com/makerdao/op-token-bridge/",
+    "security_contact": "security@cantina.xyz"
   }
 }

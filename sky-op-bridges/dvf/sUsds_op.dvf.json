@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x92a8abe2bf002b90bf5ceb2fc0244f8e4398c85bbf1c4c39b6a76d447ae9155d",
+  "id": "0xebb99d24c1fadfffaf8bf57b9e3d2e4c2f6b930f736d0d79d49669c0e54b8261",
   "contract_name": "ERC1967Proxy",
   "address": "0xb5b2dc7fd34c249f4be7fb1fcea07950784229e0",
   "chain_id": 10,
@@ -152,7 +152,7 @@
   ],
   "unvalidated_metadata": {
     "author_name": "Cantina",
-    "description": "Sky Optimism sUSDS",
+    "description": "Sky sUSDS Token on Optimism",
     "hardfork": [
       "paris",
       "shanghai"

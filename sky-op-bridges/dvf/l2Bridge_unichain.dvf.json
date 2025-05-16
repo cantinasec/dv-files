@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x3edc9104ba18e7345b98f038dd67b36a2e32c2d784c7445a01c85440eaa224d9",
+  "id": "0xec9fbd55894814b60677841b9beb34d29f0d92da87a2fe63754ed04687a37f97",
   "contract_name": "ERC1967Proxy",
   "address": "0xa13152006d0216fe4627a0d3b006087a6a55d752",
   "chain_id": 130,
@@ -168,7 +168,7 @@
   ],
   "unvalidated_metadata": {
     "author_name": "Cantina",
-    "description": "Sky UniChain Bridge",
+    "description": "Sky Unichain Token Bridge",
     "hardfork": [
       "paris",
       "shanghai"

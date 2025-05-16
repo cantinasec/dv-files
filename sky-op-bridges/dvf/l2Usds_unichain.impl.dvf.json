@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x494952837e00ad422588015eae8abf4b22809f80d275327e12c19fc2c3608e89",
+  "id": "0xe77affa089ae7f6ef810fb3a805c463e6a92550d09ef52ee1372eff447275465",
   "contract_name": "Usds",
   "address": "0x8fb6ef2da06a6957fc84c2c55bb195837fb7dba9",
   "chain_id": 130,
@@ -83,14 +83,14 @@
     }
   ],
   "unvalidated_metadata": {
-    "author_name": "Author",
-    "description": "System Description",
+    "author_name": "Cantina",
+    "description": "Sky USDS Token on Unichain",
     "hardfork": [
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://example.org/report.pdf",
-    "source_url": "https://github.com/source/code",
-    "security_contact": "security@example.org"
+    "audit_report": "https://github.com/makerdao/usds/blob/d65551dbc11cfe1afcc4718ab790663b99d766af/audit/20240926-cantina-report-review-makerdao-usds.pdf",
+    "source_url": "https://github.com/makerdao/usds",
+    "security_contact": "security@cantina.xyz"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x060e315c54907135fdcaf098cd5ddca8d5f45cdc49176de0f1e6cf71a262a15d",
+  "id": "0x00b7cc680b72d650fb8d034a3b2c1f08d376efe0d2156643e37a47632adffa90",
   "contract_name": "ERC1967Proxy",
   "address": "0x3d25b7d486cae1810374d37a48bcf0963c9b8057",
   "chain_id": 1,
@@ -176,7 +176,7 @@
   ],
   "unvalidated_metadata": {
     "author_name": "Cantina",
-    "description": "Sky Optimism Bridge",
+    "description": "Sky Optimism Token Bridge",
     "hardfork": [
       "paris",
       "shanghai"

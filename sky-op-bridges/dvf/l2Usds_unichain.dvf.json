@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x4d2e5cb289bb9dda1f1565aa50936feb875850cb7b4eb97ef64085348935bdd8",
+  "id": "0xf22dd4536a666cc43dacd11562ef61fe490cbf33726a05b7ed8973c032954528",
   "contract_name": "ERC1967Proxy",
   "address": "0x7e10036acc4b56d4dfca3b77810356ce52313f9c",
   "chain_id": 130,
@@ -152,7 +152,7 @@
   ],
   "unvalidated_metadata": {
     "author_name": "Cantina",
-    "description": "Sky USDS Token on UniChain",
+    "description": "Sky USDS Token on Unichain",
     "hardfork": [
       "paris",
       "shanghai"

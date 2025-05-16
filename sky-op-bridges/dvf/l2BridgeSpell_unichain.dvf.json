@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0xe0b3acf61c7260a34658aafe42ac833a535832afe8179c37b721d5d61f3464f1",
+  "id": "0xbd8dba1dfa204d96c1f79f5eaded166b9de1b5d20ebd0e4b9de81231790cf7ff",
   "contract_name": "L2TokenBridgeSpell",
   "address": "0x32760698c87834c02ed9aff2d4fc3e16c029b936",
   "chain_id": 130,
@@ -25,7 +25,7 @@
   "critical_events": [],
   "unvalidated_metadata": {
     "author_name": "Cantina",
-    "description": "Sky UniChain Bridge",
+    "description": "Sky Unichain Token Bridge",
     "hardfork": [
       "paris",
       "shanghai"

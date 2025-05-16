@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0xc4cf3bd8e535c7cce07d02299769a731f5b8a32f5d71f4f4f5cbb2de643917ad",
+  "id": "0x11c3244256ede9553adf3151b3d2e75a058e82255d0a32359e056cca1dfa9d3f",
   "contract_name": "Escrow",
   "address": "0x1196f688c585d3e5c895ef8954ffb0dcdafc566a",
   "chain_id": 1,
@@ -72,7 +72,7 @@
   ],
   "unvalidated_metadata": {
     "author_name": "Cantina",
-    "description": "Sky UniChain Bridge",
+    "description": "Sky Unichain Token Bridge Escrow",
     "hardfork": [
       "paris",
       "shanghai"

@@ -200,7 +200,7 @@ The initialization validation was performed at the following blocks:
 
 **Relevant State:**
 1. `implementation = 0xc2702C859016db756149716cc4d2B7D7A436CF04` - Matches expected implementation contract.
-2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism Gov Relay [`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`](https://etherscan.io/address/0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F#readContract#F1) on Ethereum which can be verified from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
+2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism `L1GovernanceRelay` [`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`](https://etherscan.io/address/0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F#readContract#F1) on Ethereum which can be verified from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
 
 ---
 
@@ -225,7 +225,7 @@ The initialization validation was performed at the following blocks:
 
 **Relevant State:**
 1. `implementation = 0x2A3541003B34f34833a82F194e4dC69a7a39B057` - Matches expected implementation contract.
-2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism Gov Relay [`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`](https://etherscan.io/address/0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F#readContract#F1) on Ethereum which can be verified from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
+2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism `L1GovernanceRelay` [`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`](https://etherscan.io/address/0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F#readContract#F1) on Ethereum which can be verified from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
 3. `totalSupply = 0`
 
 ---
@@ -240,7 +240,7 @@ The initialization validation was performed at the following blocks:
 
 **Relevant State:**
 1. `implementation = 0x6f0888DDA6a5E35451D5bE0fABb20171715788B3` - Matches expected implementation contract.
-2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism Gov Relay [`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`](https://etherscan.io/address/0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F#readContract#F1) on Ethereum which can be verified from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
+2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism `L1GovernanceRelay` [`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`](https://etherscan.io/address/0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F#readContract#F1) on Ethereum which can be verified from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
 3. `totalSupply = 0`
 
 
@@ -408,6 +408,6 @@ dv init --project ./projects/susds --address 0xb5B2dc7fd34C249F4be7fB1fCea079507
 dv init --project ./projects/susds --address 0x6f0888DDA6a5E35451D5bE0fABb20171715788B3 --contractname SUsds sUsds_op.impl.dvf.json --chainid 10 --initblock 135858527
 ```
 
-> Note: need to run `dv id <dvf>` after altering the dvf files. 
+> Note: You need to run `dv id <dvf>` after altering the dvf files. 
   
 </details>

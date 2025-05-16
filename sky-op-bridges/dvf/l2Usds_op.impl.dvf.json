@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0xebaddd65843fce08f97b5f96556f74db7e6b499dc8b00f608b70505f11fcd0f0",
+  "id": "0xc66256f54f59e8e91ff3add4eaf710b9b44eac1fafe0ee966d1b4bfa8bb0a409",
   "contract_name": "Usds",
   "address": "0x2a3541003b34f34833a82f194e4dc69a7a39b057",
   "chain_id": 10,
@@ -83,14 +83,14 @@
     }
   ],
   "unvalidated_metadata": {
-    "author_name": "Author",
-    "description": "System Description",
+    "author_name": "Cantina",
+    "description": "Sky USDS Token on Optimism",
     "hardfork": [
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://example.org/report.pdf",
-    "source_url": "https://github.com/source/code",
-    "security_contact": "security@example.org"
+    "audit_report": "https://github.com/makerdao/usds/blob/d65551dbc11cfe1afcc4718ab790663b99d766af/audit/20240926-cantina-report-review-makerdao-usds.pdf",
+    "source_url": "https://github.com/makerdao/usds",
+    "security_contact": "security@cantina.xyz"
   }
 }
