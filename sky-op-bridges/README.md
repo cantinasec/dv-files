@@ -45,8 +45,14 @@ Optimism:
 All deployed contracts listed above have been validated against the code at the following commits:
 
 - [op-token-bridge](https://github.com/makerdao/op-token-bridge/tree/82918f4853d50c6520dac53fdb70a42fd4ce671b): `82918f4853d50c6520dac53fdb70a42fd4ce671b`
-- susds: [susds](https://github.com/makerdao/sdai/tree/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce): `dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce`
-- usds: [usds](https://github.com/makerdao/usds/tree/d65551dbc11cfe1afcc4718ab790663b99d766af): `d65551dbc11cfe1afcc4718ab790663b99d766af`
+- [susds](https://github.com/makerdao/sdai/tree/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce): `dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce`
+- [usds](https://github.com/makerdao/usds/tree/d65551dbc11cfe1afcc4718ab790663b99d766af): `d65551dbc11cfe1afcc4718ab790663b99d766af`
+
+- [op-token-bridge](https://github.com/makerdao/op-token-bridge/tree/0f935505c0dc74ce3db2a9998320a56119321814): `0f935505c0dc74ce3db2a9998320a56119321814`, corresponds to [Cantina 2024-10-23 report](https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20241023-cantina-report-review-makerdao-op-token-bridge.pdf) when compiled with the compiler options specified [here](https://github.com/makerdao/op-token-bridge/commit/82918f4853d50c6520dac53fdb70a42fd4ce671b)
+- [susds](https://github.com/makerdao/sdai/tree/e1d160aba17e95e8cec3d6bf50f310fbed9f28d6): `e1d160aba17e95e8cec3d6bf50f310fbed9f28d6`, corresponds to [Cantina 2024-09-26 report](https://github.com/makerdao/sdai/blob/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/audit/20240926-cantina-report-maker-susds.pdf)
+- [usds](https://github.com/makerdao/usds/tree/45bf759ba046b66dd115842ee8b9205a64e7bab6): `45bf759ba046b66dd115842ee8b9205a64e7bab6`, corresponds to [Cantina 2024-09-26 report](https://github.com/makerdao/usds/blob/d65551dbc11cfe1afcc4718ab790663b99d766af/audit/20240926-cantina-report-review-makerdao-usds.pdf)
+
+
 
 ## Initialization validation
 
@@ -279,9 +285,13 @@ dv init --project ./projects/op-token-bridge --address 0x1196F688C585D3E5C895Ef8
 
 dv init --project ./projects/op-token-bridge --address 0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2 --contractname ERC1967Proxy --implementation L1TokenBridge l1Bridge_unichain.dvf.json --chainid 1 --initblock 22488821
 
+dv init --project ./projects/op-token-bridge --address 0x8A925ccFd5F7f46332E2D719A916f8b4a643599F --contractname L1TokenBridge l1Bridge_unichain.impl.dvf.json --chainid 1 --initblock 22488821
+
 dv init --project ./projects/op-token-bridge --address 0xb383070Cf9F4f01C3a2cfD0ef6da4BC057b429b7 --contractname L1GovernanceRelay l1GovRelay_unichain.dvf.json --chainid 1 --initblock 22488821
 
 dv init --project ./projects/op-token-bridge --address 0xa13152006D0216Fe4627a0D3B006087A6a55D752 --contractname ERC1967Proxy --implementation L2TokenBridge l2Bridge_unichain.dvf.json --chainid 130 --initblock 16567310
+
+dv init --project ./projects/op-token-bridge --address 0xd78292C12707CF28E8EB7bf06fA774D1044C2dF5 --contractname L2TokenBridge l2Bridge_unichain.impl.dvf.json --chainid 130 --initblock 16567310
 
 dv init --project ./projects/op-token-bridge --address 0x32760698c87834c02ED9AFF2d4FC3e16c029B936 --contractname L2TokenBridgeSpell l2BridgeSpell_unichain.dvf.json --chainid 130 --initblock 16567310
 
@@ -289,21 +299,29 @@ dv init --project ./projects/op-token-bridge --address 0x3510a7F16F549EcD0Ef018D
 
 dv init --project ./projects/usds --address 0x7E10036Acc4B56d4dFCa3b77810356CE52313F9C --contractname ERC1967Proxy --implementation Usds l2Usds_unichain.dvf.json --chainid 130 --initblock 16567310
 
+dv init --project ./projects/usds --address 0x8fb6EF2dA06a6957fC84C2C55bb195837fB7DBa9 --contractname Usds l2Usds_unichain.impl.dvf.json --chainid 130 --initblock 16567310
+
 dv init --project ./projects/op-token-bridge --address 0x3d25B7d486caE1810374d37A48BCf0963c9B8057 --contractname ERC1967Proxy --implementation L1TokenBridge l1Bridge_op.dvf.json --chainid 1 --initblock 22488821
 
+dv init --project ./projects/op-token-bridge --address 0xA50adBad34c1e9786979bD44220F8fd46e43A6B0 --contractname L1TokenBridge l1Bridge_op.impl.dvf.json --chainid 1 --initblock 22488821
+
 dv init --project ./projects/op-token-bridge --address 0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6 --contractname ERC1967Proxy --implementation L2TokenBridge l2Bridge_op.dvf.json --chainid 10 --initblock 135858527
+
+dv init --project ./projects/op-token-bridge --address 0xc2702C859016db756149716cc4d2B7D7A436CF04 --contractname L2TokenBridge l2Bridge_op.impl.dvf.json --chainid 10 --initblock 135858527
 
 dv init --project ./projects/op-token-bridge --address 0x99892216eD34e8FD924A1dBC758ceE61a9109409 --contractname L2TokenBridgeSpell l2BridgeSpell_op.dvf.json --chainid 10 --initblock 135858527
 
 dv init --project ./projects/usds --address 0x4F13a96EC5C4Cf34e442b46Bbd98a0791F20edC3 --contractname ERC1967Proxy --implementation Usds l2Usds_op.dvf.json --chainid 10 --initblock 135858527
 
+dv init --project ./projects/usds --address 0x2A3541003B34f34833a82F194e4dC69a7a39B057 --contractname Usds l2Usds_op.impl.dvf.json --chainid 10 --initblock 135858527
+
 dv init --project ./projects/susds --address 0xA06b10Db9F390990364A3984C04FaDf1c13691b5 --contractname ERC1967Proxy --implementation SUsds sUsds_unichain.dvf.json --chainid 130 --initblock 16567310
 
-dv init --project ./projects/susds --address 0x15c2A564b987470FAFCaB0B036029532bd168E10 --contractname SUsds sUsds_impl_unichain.dvf.json --chainid 130 --initblock 16567310
+dv init --project ./projects/susds --address 0x15c2A564b987470FAFCaB0B036029532bd168E10 --contractname SUsds sUsds_unichain.impl.dvf.json --chainid 130 --initblock 16567310
 
 dv init --project ./projects/susds --address 0xb5B2dc7fd34C249F4be7fB1fCea07950784229e0 --contractname ERC1967Proxy --implementation SUsds sUsds_op.dvf.json --chainid 10 --initblock 135858527
 
-dv init --project ./projects/susds --address 0x6f0888DDA6a5E35451D5bE0fABb20171715788B3 --contractname SUsds sUsds_impl_op.dvf.json --chainid 10 --initblock 135858527
+dv init --project ./projects/susds --address 0x6f0888DDA6a5E35451D5bE0fABb20171715788B3 --contractname SUsds sUsds_op.impl.dvf.json --chainid 10 --initblock 135858527
 ```
 
 > Note: need to run `dv id <dvf>` after changing the dvf files. 
