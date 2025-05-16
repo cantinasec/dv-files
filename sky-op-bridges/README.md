@@ -46,9 +46,9 @@ Optimism:
 
 All deployed contracts listed above have been validated against the code at the following commits using [ChainSecurity's Deployment Validation Tool](https://github.com/ChainSecurity/deployment_validation).
 
-- [op-token-bridge](https://github.com/makerdao/op-token-bridge/tree/0f935505c0dc74ce3db2a9998320a56119321814): `0f935505c0dc74ce3db2a9998320a56119321814`, corresponds to [Cantina 2024-10-23 report](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/audit/20241023-cantina-report-review-makerdao-op-token-bridge.pdf) when compiled with the compiler options specified [here](https://github.com/makerdao/op-token-bridge/commit/0f935505c0dc74ce3db2a9998320a56119321814)
-- [susds](https://github.com/makerdao/sdai/tree/e1d160aba17e95e8cec3d6bf50f310fbed9f28d6): `e1d160aba17e95e8cec3d6bf50f310fbed9f28d6`, corresponds to [Cantina 2024-09-26 report](https://github.com/makerdao/sdai/blob/e1d160aba17e95e8cec3d6bf50f310fbed9f28d6/audit/20240926-cantina-report-maker-susds.pdf)
-- [usds](https://github.com/makerdao/usds/tree/45bf759ba046b66dd115842ee8b9205a64e7bab6): `45bf759ba046b66dd115842ee8b9205a64e7bab6`, corresponds to [Cantina 2024-09-26 report](https://github.com/makerdao/usds/blob/45bf759ba046b66dd115842ee8b9205a64e7bab6/audit/20240926-cantina-report-review-makerdao-usds.pdf)
+- [op-token-bridge](https://github.com/makerdao/op-token-bridge/tree/0f935505c0dc74ce3db2a9998320a56119321814): `0f935505c0dc74ce3db2a9998320a56119321814`, corresponds to [Cantina 2024-10-23 report](https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20241023-cantina-report-review-makerdao-op-token-bridge.pdf) when compiled with the compiler options specified [here](https://github.com/makerdao/op-token-bridge/commit/0f935505c0dc74ce3db2a9998320a56119321814)
+- [susds](https://github.com/makerdao/sdai/tree/e1d160aba17e95e8cec3d6bf50f310fbed9f28d6): `e1d160aba17e95e8cec3d6bf50f310fbed9f28d6`, corresponds to [Cantina 2024-09-26 report](https://github.com/makerdao/sdai/blob/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/audit/20240926-cantina-report-maker-susds.pdf)
+- [usds](https://github.com/makerdao/usds/tree/45bf759ba046b66dd115842ee8b9205a64e7bab6): `45bf759ba046b66dd115842ee8b9205a64e7bab6`, corresponds to [Cantina 2024-09-26 report](https://github.com/makerdao/usds/blob/d65551dbc11cfe1afcc4718ab790663b99d766af/audit/20240926-cantina-report-review-makerdao-usds.pdf)
 
 
 ## Initialization validation
