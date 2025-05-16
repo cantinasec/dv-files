@@ -1,14 +1,103 @@
 # Sky OP Bridges Deployment Validation
 
 
-Validated commits:
+This report is given for the following contract addresses.
 
-- op-token-bridge: `82918f4853d50c6520dac53fdb70a42fd4ce671b`
+```js
+unichain_bridge: 
+{
+  "escrow": "0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A",
+  "l1Bridge": "0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2",
+  "l1BridgeImp": "0x8A925ccFd5F7f46332E2D719A916f8b4a643599F",
+  "l1GovRelay": "0xb383070Cf9F4f01C3a2cfD0ef6da4BC057b429b7",
+  "l2Bridge": "0xa13152006D0216Fe4627a0D3B006087A6a55D752",
+  "l2BridgeImp": "0xd78292C12707CF28E8EB7bf06fA774D1044C2dF5",
+  "l2BridgeSpell": "0x32760698c87834c02ED9AFF2d4FC3e16c029B936",
+  "l2GovRelay": "0x3510a7F16F549EcD0Ef018DE0B3c2ad7c742990f",
+  "l2Usds": "0x7E10036Acc4B56d4dFCa3b77810356CE52313F9C",
+  "l2UsdsImp": "0x8fb6EF2dA06a6957fC84C2C55bb195837fB7DBa9"
+}
+optimism_bridge:
+{
+  "l1Bridge": "0x3d25B7d486caE1810374d37A48BCf0963c9B8057",
+  "l1BridgeImp": "0xA50adBad34c1e9786979bD44220F8fd46e43A6B0",
+  "l2Bridge": "0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6",
+  "l2BridgeImp": "0xc2702C859016db756149716cc4d2B7D7A436CF04",
+  "l2BridgeSpell": "0x99892216eD34e8FD924A1dBC758ceE61a9109409",
+  "l2Usds": "0x4F13a96EC5C4Cf34e442b46Bbd98a0791F20edC3",
+  "l2UsdsImp": "0x2A3541003B34f34833a82F194e4dC69a7a39B057"
+}
+Unichain:
+{
+  "sUsds": "0xA06b10Db9F390990364A3984C04FaDf1c13691b5",
+  "sUsdsImp": "0x15c2A564b987470FAFCaB0B036029532bd168E10"
+}
+Optimism:
+{
+  "sUsds": "0xb5B2dc7fd34C249F4be7fB1fCea07950784229e0",
+  "sUsdsImp": "0x6f0888DDA6a5E35451D5bE0fABb20171715788B3"
+}
+```
+
+
+## Code validation
+
+All deployed contracts listed above have been validated against the code at the following commits:
+
+- [op-token-bridge](https://github.com/makerdao/op-token-bridge/tree/82918f4853d50c6520dac53fdb70a42fd4ce671b): `82918f4853d50c6520dac53fdb70a42fd4ce671b`
 - susds: `dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce`
 - usds: `d65551dbc11cfe1afcc4718ab790663b99d766af`
 
+## Initialization validation
 
-## Validation commands
+### ETH - Unichain bridge - Escrow (`0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2`)
+
+**Code:** [op-token-bridge/src/Escrow.sol](https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/src/Escrow.sol)
+
+**Immutables:** N/A
+
+**Relevant State:**
+1. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
+
+
+
+### ETH - Unichain bridge - L1 Token Bridge (`0x3d25b7d486cae1810374d37a48bcf0963c9b8057`)
+
+**Code:** 
+1. Proxy `0x3d25b7d486cae1810374d37a48bcf0963c9b8057`: [op-token-bridge/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/op-token-bridge/tree/82918f4853d50c6520dac53fdb70a42fd4ce671b/lib/ERC1967Proxy.sol)
+2. Implementation `0x8A925ccFd5F7f46332E2D719A916f8b4a643599F`: [op-token-bridge/src/L1TokenBridge.sol](https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/src/L1TokenBridge.sol)
+
+**Immutables:**
+1. `implementation.otherBridge = 0xa13152006D0216Fe4627a0D3B006087A6a55D752` - Matches "Unichain - Unichain Bridge - L2 Token Bridge"
+2. `implementation.messenger = 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6` - [`L1CrossDomainMessengerProxy`](https://docs.unichain.org/docs/technical-information/contract-addresses)
+
+**Relevant State:**
+1. `implementation = 0x8a925ccfd5f7f46332e2d719a916f8b4a643599f` - Matches expected implementation contract.
+1. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
+
+
+### ETH - Optimism bridge - L1 Token Bridge (`0x3d25b7d486cae1810374d37a48bcf0963c9b8057`)
+
+**Code:** 
+1. Proxy `0x3d25b7d486cae1810374d37a48bcf0963c9b8057`: [op-token-bridge/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/op-token-bridge/tree/82918f4853d50c6520dac53fdb70a42fd4ce671b/lib/ERC1967Proxy.sol)
+2. Implementation `0xa50adbad34c1e9786979bd44220f8fd46e43a6b0`: [op-token-bridge/src/L1TokenBridge.sol](https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/src/L1TokenBridge.sol)
+
+**Immutables:**
+1. `implementation.otherBridge = 0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6` - Matches "Optimism - Optimism Bridge - L2 Token Bridge"
+2. `implementation.messenger = 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1` - [`L1CrossDomainMessengerProxy`](https://docs.optimism.io/superchain/addresses)
+
+**Relevant State:**
+1. `implementation = 0xa50adbad34c1e9786979bd44220f8fd46e43a6b0` - Matches expected implementation contract.
+1. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
+
+
+
+
+
+
+# Verifying the DV-files yourself
+
+### Validation commands
 
 Check out the git repositories at the mentioned commits:
 
@@ -19,11 +108,11 @@ git submodule update .
 git submodule status
 ```
 
-## Install Deployment Verification Tool
+### Install Deployment Verification Tool
 
 We are using the Deployment Verification Tool from ChainSecurity, which is designed to verify deployed contracts. You can find it [here](https://github.com/ChainSecurity/deployment_validation). We used the version from the following commit: [4c804e4bb984024857c71aa6c2fe279999201105](https://github.com/ChainSecurity/deployment_validation/commit/4c804e4bb984024857c71aa6c2fe279999201105).
 
-## Create Validation File
+### Create Validation File
 
 Copy the following into a file named `.dv_config.json` in the root directory of this repository:
 
@@ -52,7 +141,8 @@ Copy the following into a file named `.dv_config.json` in the root directory of 
 You have to replace the placeholder values with your own. If you do not know from where to get RPCs that support debug_traceTransaction or trace_transaction, check [here](https://github.com/mario-eth/deployment_validation?tab=readme-ov-file#dvf-creation). Furthermore, you have to replace `ETHERSCAN_API_KEY` with your own Etherscan API key.
 
 -------- 
-## DV-file creation THIS WILL NEED TO BE DELETED IN THE FINAL COMMIT, this is just for bootstraping the dv files
+
+### DV-file creation THIS WILL NEED TO BE DELETED IN THE FINAL COMMIT, this is just for bootstraping the dv files
 
 
 
@@ -98,44 +188,6 @@ dv init --project ./projects/susds --address 0x6f0888DDA6a5E35451D5bE0fABb201717
 -----
 
 #### Validate the DV-files
-
-The DV files where generated based on the following deployed contracts
-
-```js
-unichain_bridge: 
-{
-  "escrow": "0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A",
-  "l1Bridge": "0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2",
-  "l1BridgeImp": "0x8A925ccFd5F7f46332E2D719A916f8b4a643599F",
-  "l1GovRelay": "0xb383070Cf9F4f01C3a2cfD0ef6da4BC057b429b7",
-  "l2Bridge": "0xa13152006D0216Fe4627a0D3B006087A6a55D752",
-  "l2BridgeImp": "0xd78292C12707CF28E8EB7bf06fA774D1044C2dF5",
-  "l2BridgeSpell": "0x32760698c87834c02ED9AFF2d4FC3e16c029B936",
-  "l2GovRelay": "0x3510a7F16F549EcD0Ef018DE0B3c2ad7c742990f",
-  "l2Usds": "0x7E10036Acc4B56d4dFCa3b77810356CE52313F9C",
-  "l2UsdsImp": "0x8fb6EF2dA06a6957fC84C2C55bb195837fB7DBa9"
-}
-optimism_bridge:
-{
-  "l1Bridge": "0x3d25B7d486caE1810374d37A48BCf0963c9B8057",
-  "l1BridgeImp": "0xA50adBad34c1e9786979bD44220F8fd46e43A6B0",
-  "l2Bridge": "0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6",
-  "l2BridgeImp": "0xc2702C859016db756149716cc4d2B7D7A436CF04",
-  "l2BridgeSpell": "0x99892216eD34e8FD924A1dBC758ceE61a9109409",
-  "l2Usds": "0x4F13a96EC5C4Cf34e442b46Bbd98a0791F20edC3",
-  "l2UsdsImp": "0x2A3541003B34f34833a82F194e4dC69a7a39B057"
-}
-Unichain:
-{
-  "sUsds": "0xA06b10Db9F390990364A3984C04FaDf1c13691b5",
-  "sUsdsImp": "0x15c2A564b987470FAFCaB0B036029532bd168E10"
-}
-Optimism:
-{
-  "sUsds": "0xb5B2dc7fd34C249F4be7fB1fCea07950784229e0",
-  "sUsdsImp": "0x6f0888DDA6a5E35451D5bE0fABb20171715788B3"
-}
-```
 
 At the following blocks:
 
