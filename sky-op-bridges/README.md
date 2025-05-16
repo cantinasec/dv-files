@@ -135,33 +135,21 @@ All deployed contracts listed above have been validated against the code at the 
 2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Unichain - Unichain Bridge - L2 Gov Relay"
 3. `totalSupply = 0`
 
+### Unichain - sUSDS (`0xA06b10Db9F390990364A3984C04FaDf1c13691b5`)
+
+**Code:** 
+1. Proxy `0xA06b10Db9F390990364A3984C04FaDf1c13691b5`: [sdai/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/sdai/tree/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/lib)
+2. Implementation `0x15c2A564b987470FAFCaB0B036029532bd168E10`: [sdai/src/l2/SUsds.sol](https://github.com/makerdao/sdai/tree/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/src/l2/SUsds.sol)
+
+**Immutables:** N/A
+
+**Relevant State:**
+1. `implementation = 0x15c2a564b987470fafcab0b036029532bd168e10` - Matches expected implementation contract.
+2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Optimism - Optimism Bridge - L2 Gov Relay"
+3. `totalSupply = 0`
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### ETH - Optimism bridge - L1 Token Bridge (`0x3d25b7d486cae1810374d37a48bcf0963c9b8057`)
+### Ethereum - Optimism bridge - L1 Token Bridge (`0x3d25b7d486cae1810374d37a48bcf0963c9b8057`)
 
 **Code:** 
 1. Proxy `0x3d25b7d486cae1810374d37a48bcf0963c9b8057`: [op-token-bridge/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/op-token-bridge/tree/82918f4853d50c6520dac53fdb70a42fd4ce671b/lib/)
@@ -176,9 +164,58 @@ All deployed contracts listed above have been validated against the code at the 
 1. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
 
 
+### Optimism - Optimism Bridge - L2 Token Bridge (`0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6`)
+
+**Code:** 
+1. Proxy `0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6`: [op-token-bridge/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/op-token-bridge/tree/82918f4853d50c6520dac53fdb70a42fd4ce671b/lib/)
+2. Implementation `0xc2702C859016db756149716cc4d2B7D7A436CF04`: [op-token-bridge/src/L2TokenBridge.sol](https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/src/L2TokenBridge.sol)
+
+**Immutables:**
+1. `implementation.otherBridge = 0x3d25B7d486caE1810374d37A48BCf0963c9B8057` - Matches "Ethereum - Optimism bridge - L1 Token Bridge"
+2. `implementation.messenger = 0x4200000000000000000000000000000000000007` - [`L2CrossDomainMessenger`](https://docs.optimism.io/stack/smart-contracts#l2crossdomainmessenger).
+
+**Relevant State:**
+1. `implementation = 0xc2702C859016db756149716cc4d2B7D7A436CF04` - Matches expected implementation contract.
+2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism Gov Relay (`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`) on Ethereum which can be retrieved from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
+
+
+### Optimism - Optimism Bridge - L2 Bridge Spell (`0x99892216eD34e8FD924A1dBC758ceE61a9109409`)
+
+**Code:** [op-token-bridge/deploy/L2TokenBridgeSpell.sol](https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/deploy/L2TokenBridgeSpell.sol)
+
+**Immutables:**
+1. `l2Bridge = 0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6` - Matches "Optimism - Optimism Bridge - L2 Token Bridge"
+
+**Relevant State:** N/A
+
+
+### Optimism - L2 USDS (`0x4F13a96EC5C4Cf34e442b46Bbd98a0791F20edC3`)
+
+**Code:** 
+1. Proxy `0x4F13a96EC5C4Cf34e442b46Bbd98a0791F20edC3`: [usds/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/usds/tree/d65551dbc11cfe1afcc4718ab790663b99d766af/lib/)
+2. Implementation `0x2A3541003B34f34833a82F194e4dC69a7a39B057`: [usds/src/Usds.sol](https://github.com/makerdao/usds/blob/d65551dbc11cfe1afcc4718ab790663b99d766af/src/Usds.sol)
+
+**Immutables:** N/A
+
+**Relevant State:**
+1. `implementation = 0x2A3541003B34f34833a82F194e4dC69a7a39B057` - Matches expected implementation contract.
+2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism Gov Relay (`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`) on L1 which can be retrieved from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
+3. `totalSupply = 0`
 
 
 
+### Optimism - L2 sUSDS (`0xb5B2dc7fd34C249F4be7fB1fCea07950784229e0`)
+
+**Code:** 
+1. Proxy `0xb5B2dc7fd34C249F4be7fB1fCea07950784229e0`: [sdai/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/sdai/tree/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/lib)
+2. Implementation `0x6f0888DDA6a5E35451D5bE0fABb20171715788B3`: [sdai/src/l2/SUsds.sol](https://github.com/makerdao/sdai/tree/dfc7f41cb7599afcb0f0eb1ddaadbf9dd4015dce/src/l2/SUsds.sol)
+
+**Immutables:** N/A
+
+**Relevant State:**
+1. `implementation = 0x6f0888DDA6a5E35451D5bE0fABb20171715788B3` - Matches expected implementation contract.
+2. `wards[0x10e6593cdda8c58a1d0f14c5164b376352a55f2f] = true` - Matches `l2GovRelay` for Optimism, verified as being the `l2GovernanceRelay` value on the Optimism Gov Relay (`0x09B354CDA89203BB7B3131CC728dFa06ab09Ae2F`) on L1 which can be retrieved from [chainlog.sky.money](https://chainlog.sky.money/api/mainnet/active.json)
+3. `totalSupply = 0`
 
 # Verifying the DV-files yourself
 
