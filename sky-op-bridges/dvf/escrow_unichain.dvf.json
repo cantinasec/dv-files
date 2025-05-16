@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x11c3244256ede9553adf3151b3d2e75a058e82255d0a32359e056cca1dfa9d3f",
+  "id": "0x64cc99e1f4803276af9fb5a1284a2c87bd9dd26e98cb71b98d09e6e55b138c5b",
   "contract_name": "Escrow",
   "address": "0x1196f688c585d3e5c895ef8954ffb0dcdafc566a",
   "chain_id": 1,
@@ -77,7 +77,7 @@
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20240909-cantina-report-review-makerdao-op-token-bridge.pdf",
+    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20241023-cantina-report-review-makerdao-op-token-bridge.pdf",
     "source_url": "http://github.com/makerdao/op-token-bridge/",
     "security_contact": "security@cantina.xyz"
   }

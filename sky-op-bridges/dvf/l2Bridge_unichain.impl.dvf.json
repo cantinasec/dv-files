@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x8df3105e0f7ab8b95c67d0902467bf66e2fbfd4fb2d67d7f8c48831e1c355800",
+  "id": "0xc0309247dbd7b8188d37abf3aa6ca6af658d2239d1662afe13391068911fe912",
   "contract_name": "L2TokenBridge",
   "address": "0xd78292c12707cf28e8eb7bf06fa774d1044c2df5",
   "chain_id": 130,
@@ -121,7 +121,7 @@
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20240909-cantina-report-review-makerdao-op-token-bridge.pdf",
+    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20241023-cantina-report-review-makerdao-op-token-bridge.pdf",
     "source_url": "http://github.com/makerdao/op-token-bridge/",
     "security_contact": "security@cantina.xyz"
   }

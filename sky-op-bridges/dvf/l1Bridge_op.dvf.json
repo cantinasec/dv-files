@@ -1,6 +1,6 @@
 {
   "version": "0.9.1",
-  "id": "0x00b7cc680b72d650fb8d034a3b2c1f08d376efe0d2156643e37a47632adffa90",
+  "id": "0x660ccd36d9ebc0e52fdd17a3d2841b34f04b37d21100bca3301c3dc93996a468",
   "contract_name": "ERC1967Proxy",
   "address": "0x3d25b7d486cae1810374d37a48bcf0963c9b8057",
   "chain_id": 1,
@@ -181,7 +181,7 @@
       "paris",
       "shanghai"
     ],
-    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20240909-cantina-report-review-makerdao-op-token-bridge.pdf",
+    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20241023-cantina-report-review-makerdao-op-token-bridge.pdf",
     "source_url": "http://github.com/makerdao/op-token-bridge/",
     "security_contact": "security@cantina.xyz"
   }
