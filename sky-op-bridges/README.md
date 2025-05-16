@@ -21,7 +21,7 @@ git submodule status
 
 ## Install Deployment Verification Tool
 
-Go to the [Deployment Verification tool](../dv) and install it via docker or from sources, more information [here](../dv/README.md)
+We are using the Deployment Verification Tool from ChainSecurity, which is designed to verify deployed contracts. You can find it [here](https://github.com/ChainSecurity/deployment_validation). We used the version from the following commit: [4c804e4bb984024857c71aa6c2fe279999201105](https://github.com/ChainSecurity/deployment_validation/commit/4c804e4bb984024857c71aa6c2fe279999201105).
 
 ## Create Validation File
 
