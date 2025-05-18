@@ -1,0 +1,45 @@
+{
+  "version": "0.9.1",
+  "id": "0x50c79e43c99d9cb87ffe372672d36019804e93e3b1a738186a665912e0eaba49",
+  "contract_name": "L2GovernanceRelay",
+  "address": "0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f",
+  "chain_id": 130,
+  "deployment_block_num": 15192391,
+  "init_block_num": 16567310,
+  "deployment_tx": "0x5f38fd4f78db4ba9baac986a7eb191d28eb891f0d5ab23f858c201943cb54ef3",
+  "codehash": "0x0fe805266a4eb69732a2d09ad5091b3a89b66fb136b415647a88b67e61fe5e5b",
+  "insecure": false,
+  "immutables": [
+    {
+      "var_name": "l1GovernanceRelay",
+      "value": "0x000000000000000000000000b383070cf9f4f01c3a2cfd0ef6da4bc057b429b7"
+    },
+    {
+      "var_name": "messenger",
+      "value": "0x0000000000000000000000004200000000000000000000000000000000000007"
+    }
+  ],
+  "constructor_args": [
+    {
+      "var_name": "_l1GovernanceRelay",
+      "value": "0xb383070cf9f4f01c3a2cfd0ef6da4bc057b429b7"
+    },
+    {
+      "var_name": "_l2Messenger",
+      "value": "0x4200000000000000000000000000000000000007"
+    }
+  ],
+  "critical_storage_variables": [],
+  "critical_events": [],
+  "unvalidated_metadata": {
+    "author_name": "Cantina",
+    "description": "Sky Unichain Token Bridge",
+    "hardfork": [
+      "paris",
+      "shanghai"
+    ],
+    "audit_report": "https://github.com/makerdao/op-token-bridge/blob/82918f4853d50c6520dac53fdb70a42fd4ce671b/audit/20241023-cantina-report-review-makerdao-op-token-bridge.pdf",
+    "source_url": "http://github.com/makerdao/op-token-bridge/",
+    "security_contact": "security@cantina.xyz"
+  }
+}

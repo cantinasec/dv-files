@@ -1,0 +1,10 @@
+[submodule "sky-op-bridges/projects/usds"]
+	path = sky-op-bridges/projects/usds
+	url = https://github.com/makerdao/usds
+[submodule "sky-op-bridges/projects/susds"]
+	path = sky-op-bridges/projects/susds
+	url = https://github.com/makerdao/sdai
+	branch = susds
+[submodule "sky-op-bridges/projects/op-token-bridge"]
+	path = sky-op-bridges/projects/op-token-bridge
+	url = https://github.com/makerdao/op-token-bridge
