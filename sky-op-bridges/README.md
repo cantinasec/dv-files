@@ -6,9 +6,12 @@ The deployments along with proper initialization have been validated for the fol
 Details can be found in the subsequent sections.
 
 ```json
+Ethereum:
+{
+"escrow": "0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A",
+}
 Unichain bridge: 
 {
-  "escrow": "0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A",
   "l1Bridge": "0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2",
   "l1BridgeImp": "0x8A925ccFd5F7f46332E2D719A916f8b4a643599F",
   "l1GovRelay": "0xb383070Cf9F4f01C3a2cfD0ef6da4BC057b429b7",
@@ -61,7 +64,7 @@ The initialization validation was performed at the following blocks:
 - Optimism: [135858527](https://optimistic.etherscan.io/block/135858527): May-15-2025 01:30:31 PM +UTC
 - Unichain: [16567310](https://uniscan.xyz/block/16567310) May-15-2025 01:27:49 PM +UTC
 
-### ETH - Unichain bridge - Escrow (`0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A`)
+### Ethereum - Escrow (`0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A`)
 
 **Code:** [op-token-bridge/src/Escrow.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/src/Escrow.sol)
 
@@ -72,28 +75,30 @@ The initialization validation was performed at the following blocks:
 
 ---
 
-### ETH - Unichain bridge - L1 Token Bridge (`0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2`)
+### Ethereum - Unichain bridge - L1 Token Bridge (`0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2`)
 
 **Code:** 
 1. Proxy `0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2`: [op-token-bridge/lib/**/ERC1967Proxy.sol](https://github.com/makerdao/op-token-bridge/tree/0f935505c0dc74ce3db2a9998320a56119321814/lib/)
 2. Implementation `0x8A925ccFd5F7f46332E2D719A916f8b4a643599F`: [op-token-bridge/src/L1TokenBridge.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/src/L1TokenBridge.sol)
 
 **Immutables:**
-1. `implementation.otherBridge = 0xa13152006D0216Fe4627a0D3B006087A6a55D752` - Matches "Unichain - Unichain Bridge - L2 Token Bridge"
+1. `implementation.otherBridge = 0xa13152006D0216Fe4627a0D3B006087A6a55D752` - Matches "Unichain - L2 Token Bridge"
 2. `implementation.messenger = 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6` - [`L1CrossDomainMessengerProxy`](https://docs.unichain.org/docs/technical-information/contract-addresses)
 
 **Relevant State:**
 1. `implementation = 0x8a925ccfd5f7f46332e2d719a916f8b4a643599f` - Matches expected implementation contract.
-1. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
+2. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
+3. `escrow = 0x0`
+    > ⚠️ Escrow has **not** been set to the deployed Escrow contract yet.
 
 ---
 
-### ETH - Unichain bridge - L1 Gov Relay (`0xb383070Cf9F4f01C3a2cfD0ef6da4BC057b429b7`)
+### Ethereum - Unichain bridge - L1 Gov Relay (`0xb383070Cf9F4f01C3a2cfD0ef6da4BC057b429b7`)
 
 **Code:** [op-token-bridge/src/L1GovernanceRelay.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/src/L1GovernanceRelay.sol)
 
 **Immutables:**
-1. `l2GovernanceRelay = 0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f` - Matches "Unichain - Unichain Bridge - L2 Gov Relay"
+1. `l2GovernanceRelay = 0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f` - Matches "Unichain - L2 Gov Relay"
 2. `messenger = 0x9a3d64e386c18cb1d6d5179a9596a4b5736e98a6` - [`L1CrossDomainMessengerProxy`](https://docs.unichain.org/docs/technical-information/contract-addresses)
 
 **Relevant State:**
@@ -114,7 +119,7 @@ The initialization validation was performed at the following blocks:
 
 **Relevant State:**
 1. `implementation = 0xd78292c12707cf28e8eb7bf06fa774d1044c2df5` - Matches expected implementation contract.
-2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Unichain - Unichain Bridge - L2 Gov Relay"
+2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Unichain - L2 Gov Relay"
 
 ---
 
@@ -123,7 +128,7 @@ The initialization validation was performed at the following blocks:
 **Code:** [op-token-bridge/deploy/L2TokenBridgeSpell.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/deploy/L2TokenBridgeSpell.sol)
 
 **Immutables:**
-1. `l2Bridge = 0xa13152006d0216fe4627a0d3b006087a6a55d752` - Matches "Unichain - Unichain Bridge - L2 Token Bridge"
+1. `l2Bridge = 0xa13152006d0216fe4627a0d3b006087a6a55d752` - Matches "Unichain - L2 Token Bridge"
 
 **Relevant State:** N/A
 
@@ -134,7 +139,7 @@ The initialization validation was performed at the following blocks:
 **Code:** [op-token-bridge/src/L2GovernanceRelay.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/src/L2GovernanceRelay.sol)
 
 **Immutables:**
-1. `l1GovernanceRelay = 0xb383070cf9f4f01c3a2cfd0ef6da4bc057b429b7` - Matches "ETH - Unichain bridge - L1 Gov Relay"
+1. `l1GovernanceRelay = 0xb383070cf9f4f01c3a2cfd0ef6da4bc057b429b7` - Matches "Ethereum - Unichain bridge - L1 Gov Relay"
 2. `messenger = 0x4200000000000000000000000000000000000007`
     > ⚠️ Not listed in [Unichain docs](https://docs.unichain.org/docs/technical-information/contract-addresses) but matches standard `L2CrossDomainMessenger` address for OP chains and implementation contract points to `L2CrossDomainMessenger` contract.
 
@@ -152,7 +157,7 @@ The initialization validation was performed at the following blocks:
 
 **Relevant State:**
 1. `implementation = 0x8fb6ef2da06a6957fc84c2c55bb195837fb7dba9` - Matches expected implementation contract.
-2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Unichain - Unichain Bridge - L2 Gov Relay"
+2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Unichain - L2 Gov Relay"
 3. `totalSupply = 0`
 
 ---
@@ -167,7 +172,7 @@ The initialization validation was performed at the following blocks:
 
 **Relevant State:**
 1. `implementation = 0x15c2a564b987470fafcab0b036029532bd168e10` - Matches expected implementation contract.
-2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Unichain - Unichain Bridge - L2 Gov Relay"
+2. `wards[0x3510a7f16f549ecd0ef018de0b3c2ad7c742990f] = true` - Matches "Unichain - L2 Gov Relay"
 3. `totalSupply = 0`
 
 ---
@@ -179,12 +184,14 @@ The initialization validation was performed at the following blocks:
 2. Implementation `0xa50adbad34c1e9786979bd44220f8fd46e43a6b0`: [op-token-bridge/src/L1TokenBridge.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/src/L1TokenBridge.sol)
 
 **Immutables:**
-1. `implementation.otherBridge = 0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6` - Matches "Optimism - Optimism Bridge - L2 Token Bridge"
+1. `implementation.otherBridge = 0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6` - Matches "Optimism - L2 Token Bridge"
 2. `implementation.messenger = 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1` - [`L1CrossDomainMessengerProxy`](https://docs.optimism.io/superchain/addresses)
 
 **Relevant State:**
 1. `implementation = 0xa50adbad34c1e9786979bd44220f8fd46e43a6b0` - Matches expected implementation contract.
-1. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
+2. `wards[0xbe8e3e3618f7474f8cb1d074a26affef007e98fb] = true` - [`MCD_PAUSE_PROXY`](https://chainlog.sky.money/api/mainnet/active.json)
+3. `escrow = 0x0`
+    > ⚠️ Escrow has **not** been set to the deployed Escrow contract yet.
 
 ---
 
@@ -209,7 +216,7 @@ The initialization validation was performed at the following blocks:
 **Code:** [op-token-bridge/deploy/L2TokenBridgeSpell.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/deploy/L2TokenBridgeSpell.sol)
 
 **Immutables:**
-1. `l2Bridge = 0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6` - Matches "Optimism - Optimism Bridge - L2 Token Bridge"
+1. `l2Bridge = 0x8F41DBF6b8498561Ce1d73AF16CD9C0d8eE20ba6` - Matches "Optimism - L2 Token Bridge"
 
 **Relevant State:** N/A
 
