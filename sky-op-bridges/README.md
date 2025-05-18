@@ -6,12 +6,8 @@ The deployments along with proper initialization have been validated for the fol
 Details can be found in the subsequent sections.
 
 ```json
-Ethereum:
 {
-"escrow": "0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A",
-}
-Unichain bridge: 
-{
+  "escrow": "0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A",
   "l1Bridge": "0xDF0535a4C96c9Cd8921d8FeC92A7680b281681d2",
   "l1BridgeImp": "0x8A925ccFd5F7f46332E2D719A916f8b4a643599F",
   "l1GovRelay": "0xb383070Cf9F4f01C3a2cfD0ef6da4BC057b429b7",
@@ -64,7 +60,7 @@ The initialization validation was performed at the following blocks:
 - Optimism: [135858527](https://optimistic.etherscan.io/block/135858527): May-15-2025 01:30:31 PM +UTC
 - Unichain: [16567310](https://uniscan.xyz/block/16567310) May-15-2025 01:27:49 PM +UTC
 
-### Ethereum - Escrow (`0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A`)
+### Ethereum - Unichain bridge - Escrow (`0x1196F688C585D3E5C895Ef8954FFB0dCDAfc566A`)
 
 **Code:** [op-token-bridge/src/Escrow.sol](https://github.com/makerdao/op-token-bridge/blob/0f935505c0dc74ce3db2a9998320a56119321814/src/Escrow.sol)
 
